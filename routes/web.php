@@ -32,7 +32,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //for admin
 Route::resource('categories',  CategoryController::class);
 Route::resource('videos',  VideoController::class);
-Route::put('videoss/{video}',  [VideoController::class, 'update'])->name('videoss');
 Route::resource('users', UserController::class);
 //end of admin
 
