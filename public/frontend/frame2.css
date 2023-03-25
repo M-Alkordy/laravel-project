@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+:root{
+    --main-color: #FF8500;
+}
+.active {
+    color: #000;
+}
+.deActive {
+    color: #938C8C;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.mobile-menu-hidden-overFlow {
+    overflow: hidden;
+}
+.mobileMenu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(60, 59, 59, 0.6);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+.mobileMenu .menu{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 32px 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.mobileMenu .menu .question{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.mobileMenu .menu .choices{
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 19px;
+}
+.mobileMenu .menu .choices .yes{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 7px 47px;
+}
+.mobileMenu .menu .choices .no{
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color:#fff;
+    padding: 7px 47px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.2%;
+    padding-top: 23px;
+}
+header .user{
+    position: relative;
+}
+header .user .menu{
+    cursor: pointer;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 28px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    position: absolute;
+    z-index: 4;
+    top: -10px;
+    left: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 6px 17px 13px 8px;
+    margin-top:15px;
+}
+header .user .menu p a{
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #000;
+}
+header .user .userInfo{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 14px;
+}
+header .user .userInfo img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+header .user .exit{
+    display: none;
+}
+header .categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 78px;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+header .categories p{
+    cursor: pointer;
+}
+.recordsContainer{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    column-gap: 71px;
+    row-gap: 61px;
+    flex-wrap: wrap;
+    padding: 0 3%;
+    padding-top: 50px;
+}
+.recordsContainer .record{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.recordsContainer .record .img{
+    width: 192px;
+    height: 166px;
+}
+.recordsContainer .record .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+
+}
+.recordsContainer .record .description{
+    font-weight: 400;
+    font-size: 0.938rem;
+}
+.sliderControl{
+    padding-top: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 27px;
+}
+.sliderControl {
+    width: 100%;
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+}
+.sliderControl .swiper-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    }
+.sliderControl .swiper-button-next , .sliderControl .swiper-button-prev{
+    position: relative !important;
+    cursor: pointer;
+}
+.swiper-button-next:after{
+    content: url('../assets/imgs/arrowRight.svg') !important;
+    font-size: 30px !important;
+    color: #000;
+    margin-top: 5px;
+    cursor: pointer;
+}
+ .swiper-button-prev:after{
+    content: url('../assets/imgs/arrowLeft.svg') !important;
+    font-size: 30px !important;
+    color: #000;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.swiper-pagination .swiper-pagination-number--active {
+    color: #000;
+}
+.swiper-pagination h5{
+    cursor: pointer;
+    color: #938C8C;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+@media (max-width:650px) {
+    .active{
+        color: #000;
+        padding-bottom: 2px;
+        border-bottom: 1px solid var(--main-color);
+    }
+    .deActive{
+        color: #938C8C;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 64px;
+    }
+    header .user{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3%;
+    }
+    header .user .userInfo{
+        align-self: flex-start;
+    }
+    header .user .exit{
+        display: block;
+    }
+    header .categories{
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 32px;
+    }
+    .recordsContainer{
+        column-gap: 42px;
+        row-gap: 52px;
+    }
+    .recordsContainer .record .img {
+        width: 167px;
+        height: 145px;
+        border-radius: 4px;
+    }
+    .recordsContainer .record{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .recordsContainer .record .description{
+        font-size: 0.625rem;
+        padding-top: 10px;
+    }
+    .sliderControl {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:431px){
+    .recordsContainer{
+        column-gap: 32px;
+        row-gap: 52px;
+    }
+    .recordsContainer .record .img {
+        width: 167px;
+        height: 145px;
+        border-radius: 4px;
+    }
+    .recordsContainer .record{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .recordsContainer .record .description{
+        font-size: 0.625rem;
+        padding-top: 10px;
+    }
+}
+@media (max-width:390px){
+    .recordsContainer .record .img {
+        width: 132px;
+        height: 115px;
+        border-radius: 4px;
+    }
+    header .categories{
+        font-size: 0.825rem;
+    }
+}
